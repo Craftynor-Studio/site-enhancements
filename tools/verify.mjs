@@ -1,0 +1,10 @@
+import { readFileSync } from 'node:fs';
+import { join } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import { build } from './release.mjs';
+import { loadSource } from '../lib/loader.mjs';
+const root = fileURLToPath(new URL('../', import.meta.url));
+const expected = build(root);
+if (!readFileSync(join(root, 'manifest.json')).equals(expected.bytes)) throw Error('Catalog differs from source; rebuild and sign the new revision');
+const source = await loadSource({ publicKey: readFileSync(join(root, 'public-key.txt'), 'utf8'), read: async path => readFileSync(join(root, path)) });
+console.log(`Verified published revision ${source.revision}: ${source.packages.length} packages`);

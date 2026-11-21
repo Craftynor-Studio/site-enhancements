@@ -1,0 +1,7 @@
+{
+  "format": "site-feature-mapping",
+  "version": 1,
+  "sites": {
+    "example.com": { "relationships": [] }
+  }
+}

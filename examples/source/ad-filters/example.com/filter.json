@@ -1,0 +1,12 @@
+{
+  "format": "enhanced-ad-filters",
+  "schema": 1,
+  "site": "example.com",
+  "version": 1,
+  "name": "Example ad filters",
+  "description": "Removes the example sponsored slot and blocks its ad request.",
+  "hosts": ["example.com"],
+  "filters": [],
+  "networkRules": ["||ads.example.com/slot"],
+  "scripts": [{ "file": "remove-ads.js", "run": "page_ready", "frames": "top" }]
+}

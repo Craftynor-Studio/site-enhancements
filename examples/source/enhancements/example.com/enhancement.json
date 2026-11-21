@@ -1,0 +1,13 @@
+{
+  "format": "site-enhancement",
+  "schema": 1,
+  "site": "example.com",
+  "version": 1,
+  "name": "Example reading view",
+  "description": "Adds comfortable spacing to the example article.",
+  "hosts": ["example.com"],
+  "scripts": [{ "file": "reading.js", "run": "page_ready" }],
+  "capabilities": [],
+  "options": [],
+  "features": ["Comfortable article spacing"]
+}

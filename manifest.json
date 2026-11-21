@@ -1,0 +1,14 @@
+{
+  "format": "site-enhancements",
+  "schema": 1,
+  "name": "Site Enhancements",
+  "revision": 1,
+  "packages": [],
+  "files": [
+    {
+      "path": "mapping.json",
+      "bytes": 70,
+      "sha256": "2b88fe514f3dde46cfb95ce4ae116e8d5f1c64b10e4f2ca5198ce4f72af57f7f"
+    }
+  ]
+}
